@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AnotacaoEntity" representedClassName="AnotacaoEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="anotacoes" optional="YES" attributeType="String"/>
+        <attribute name="categoria" optional="YES" attributeType="String"/>
+        <attribute name="desenhoData" optional="YES" attributeType="Binary"/>
+        <attribute name="fotoData" optional="YES" attributeType="Binary"/>
+        <attribute name="imagemAnexoData" optional="YES" attributeType="Binary"/>
+        <attribute name="titulo" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+</model>

@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E265DB72CC008AA00BE3629 /* AppMebbiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DB62CC008AA00BE3629 /* AppMebbiApp.swift */; };
+		2E265DB92CC008AA00BE3629 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DB82CC008AA00BE3629 /* Persistence.swift */; };
+		2E265DBC2CC008AA00BE3629 /* AnotacaoEntity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DBA2CC008AA00BE3629 /* AnotacaoEntity.xcdatamodeld */; };
+		2E265DBE2CC008AA00BE3629 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DBD2CC008AA00BE3629 /* ContentView.swift */; };
+		2E265DC02CC008AB00BE3629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E265DBF2CC008AB00BE3629 /* Assets.xcassets */; };
+		2E265DC42CC008AB00BE3629 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E265DC32CC008AB00BE3629 /* Preview Assets.xcassets */; };
+		2E265DCE2CC008AB00BE3629 /* AppMebbiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DCD2CC008AB00BE3629 /* AppMebbiTests.swift */; };
+		2E265DD82CC008AB00BE3629 /* AppMebbiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DD72CC008AB00BE3629 /* AppMebbiUITests.swift */; };
+		2E265DDA2CC008AB00BE3629 /* AppMebbiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DD92CC008AB00BE3629 /* AppMebbiUITestsLaunchTests.swift */; };
+		2E265DE72CC0090A00BE3629 /* PickerColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DE62CC0090A00BE3629 /* PickerColor.swift */; };
+		2E265DE92CC0092500BE3629 /* Anotacoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DE82CC0092500BE3629 /* Anotacoes.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E265DCA2CC008AB00BE3629 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E265DAB2CC008AA00BE3629 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E265DB22CC008AA00BE3629;
+			remoteInfo = AppMebbi;
+		};
+		2E265DD42CC008AB00BE3629 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E265DAB2CC008AA00BE3629 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E265DB22CC008AA00BE3629;
+			remoteInfo = AppMebbi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E265DB32CC008AA00BE3629 /* AppMebbi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMebbi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E265DB62CC008AA00BE3629 /* AppMebbiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMebbiApp.swift; sourceTree = "<group>"; };
+		2E265DB82CC008AA00BE3629 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		2E265DBB2CC008AA00BE3629 /* AppMebbi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppMebbi.xcdatamodel; sourceTree = "<group>"; };
+		2E265DBD2CC008AA00BE3629 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2E265DBF2CC008AB00BE3629 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E265DC12CC008AB00BE3629 /* AppMebbi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppMebbi.entitlements; sourceTree = "<group>"; };
+		2E265DC32CC008AB00BE3629 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E265DC92CC008AB00BE3629 /* AppMebbiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppMebbiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E265DCD2CC008AB00BE3629 /* AppMebbiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMebbiTests.swift; sourceTree = "<group>"; };
+		2E265DD32CC008AB00BE3629 /* AppMebbiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppMebbiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E265DD72CC008AB00BE3629 /* AppMebbiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMebbiUITests.swift; sourceTree = "<group>"; };
+		2E265DD92CC008AB00BE3629 /* AppMebbiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMebbiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2E265DE62CC0090A00BE3629 /* PickerColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerColor.swift; sourceTree = "<group>"; };
+		2E265DE82CC0092500BE3629 /* Anotacoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anotacoes.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E265DB02CC008AA00BE3629 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E265DC62CC008AB00BE3629 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E265DD02CC008AB00BE3629 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E265DAA2CC008AA00BE3629 = {
+			isa = PBXGroup;
+			children = (
+				2E265DB52CC008AA00BE3629 /* AppMebbi */,
+				2E265DCC2CC008AB00BE3629 /* AppMebbiTests */,
+				2E265DD62CC008AB00BE3629 /* AppMebbiUITests */,
+				2E265DB42CC008AA00BE3629 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E265DB42CC008AA00BE3629 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E265DB32CC008AA00BE3629 /* AppMebbi.app */,
+				2E265DC92CC008AB00BE3629 /* AppMebbiTests.xctest */,
+				2E265DD32CC008AB00BE3629 /* AppMebbiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E265DB52CC008AA00BE3629 /* AppMebbi */ = {
+			isa = PBXGroup;
+			children = (
+				2E265DB62CC008AA00BE3629 /* AppMebbiApp.swift */,
+				2E265DB82CC008AA00BE3629 /* Persistence.swift */,
+				2E265DBD2CC008AA00BE3629 /* ContentView.swift */,
+				2E265DE62CC0090A00BE3629 /* PickerColor.swift */,
+				2E265DE82CC0092500BE3629 /* Anotacoes.swift */,
+				2E265DBF2CC008AB00BE3629 /* Assets.xcassets */,
+				2E265DC12CC008AB00BE3629 /* AppMebbi.entitlements */,
+				2E265DBA2CC008AA00BE3629 /* AnotacaoEntity.xcdatamodeld */,
+				2E265DC22CC008AB00BE3629 /* Preview Content */,
+			);
+			path = AppMebbi;
+			sourceTree = "<group>";
+		};
+		2E265DC22CC008AB00BE3629 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2E265DC32CC008AB00BE3629 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2E265DCC2CC008AB00BE3629 /* AppMebbiTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E265DCD2CC008AB00BE3629 /* AppMebbiTests.swift */,
+			);
+			path = AppMebbiTests;
+			sourceTree = "<group>";
+		};
+		2E265DD62CC008AB00BE3629 /* AppMebbiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2E265DD72CC008AB00BE3629 /* AppMebbiUITests.swift */,
+				2E265DD92CC008AB00BE3629 /* AppMebbiUITestsLaunchTests.swift */,
+			);
+			path = AppMebbiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E265DB22CC008AA00BE3629 /* AppMebbi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E265DDD2CC008AB00BE3629 /* Build configuration list for PBXNativeTarget "AppMebbi" */;
+			buildPhases = (
+				2E265DAF2CC008AA00BE3629 /* Sources */,
+				2E265DB02CC008AA00BE3629 /* Frameworks */,
+				2E265DB12CC008AA00BE3629 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppMebbi;
+			productName = AppMebbi;
+			productReference = 2E265DB32CC008AA00BE3629 /* AppMebbi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E265DC82CC008AB00BE3629 /* AppMebbiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E265DE02CC008AB00BE3629 /* Build configuration list for PBXNativeTarget "AppMebbiTests" */;
+			buildPhases = (
+				2E265DC52CC008AB00BE3629 /* Sources */,
+				2E265DC62CC008AB00BE3629 /* Frameworks */,
+				2E265DC72CC008AB00BE3629 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E265DCB2CC008AB00BE3629 /* PBXTargetDependency */,
+			);
+			name = AppMebbiTests;
+			productName = AppMebbiTests;
+			productReference = 2E265DC92CC008AB00BE3629 /* AppMebbiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2E265DD22CC008AB00BE3629 /* AppMebbiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E265DE32CC008AB00BE3629 /* Build configuration list for PBXNativeTarget "AppMebbiUITests" */;
+			buildPhases = (
+				2E265DCF2CC008AB00BE3629 /* Sources */,
+				2E265DD02CC008AB00BE3629 /* Frameworks */,
+				2E265DD12CC008AB00BE3629 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E265DD52CC008AB00BE3629 /* PBXTargetDependency */,
+			);
+			name = AppMebbiUITests;
+			productName = AppMebbiUITests;
+			productReference = 2E265DD32CC008AB00BE3629 /* AppMebbiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E265DAB2CC008AA00BE3629 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					2E265DB22CC008AA00BE3629 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					2E265DC82CC008AB00BE3629 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 2E265DB22CC008AA00BE3629;
+					};
+					2E265DD22CC008AB00BE3629 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 2E265DB22CC008AA00BE3629;
+					};
+				};
+			};
+			buildConfigurationList = 2E265DAE2CC008AA00BE3629 /* Build configuration list for PBXProject "AppMebbi" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E265DAA2CC008AA00BE3629;
+			productRefGroup = 2E265DB42CC008AA00BE3629 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E265DB22CC008AA00BE3629 /* AppMebbi */,
+				2E265DC82CC008AB00BE3629 /* AppMebbiTests */,
+				2E265DD22CC008AB00BE3629 /* AppMebbiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E265DB12CC008AA00BE3629 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E265DC42CC008AB00BE3629 /* Preview Assets.xcassets in Resources */,
+				2E265DC02CC008AB00BE3629 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E265DC72CC008AB00BE3629 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E265DD12CC008AB00BE3629 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E265DAF2CC008AA00BE3629 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E265DB72CC008AA00BE3629 /* AppMebbiApp.swift in Sources */,
+				2E265DBC2CC008AA00BE3629 /* AnotacaoEntity.xcdatamodeld in Sources */,
+				2E265DBE2CC008AA00BE3629 /* ContentView.swift in Sources */,
+				2E265DE92CC0092500BE3629 /* Anotacoes.swift in Sources */,
+				2E265DB92CC008AA00BE3629 /* Persistence.swift in Sources */,
+				2E265DE72CC0090A00BE3629 /* PickerColor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E265DC52CC008AB00BE3629 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E265DCE2CC008AB00BE3629 /* AppMebbiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E265DCF2CC008AB00BE3629 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E265DDA2CC008AB00BE3629 /* AppMebbiUITestsLaunchTests.swift in Sources */,
+				2E265DD82CC008AB00BE3629 /* AppMebbiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E265DCB2CC008AB00BE3629 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E265DB22CC008AA00BE3629 /* AppMebbi */;
+			targetProxy = 2E265DCA2CC008AB00BE3629 /* PBXContainerItemProxy */;
+		};
+		2E265DD52CC008AB00BE3629 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E265DB22CC008AA00BE3629 /* AppMebbi */;
+			targetProxy = 2E265DD42CC008AB00BE3629 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2E265DDB2CC008AB00BE3629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2E265DDC2CC008AB00BE3629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		2E265DDE2CC008AB00BE3629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppMebbi/AppMebbi.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AppMebbi/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mebbi.AppMebbi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E265DDF2CC008AB00BE3629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppMebbi/AppMebbi.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AppMebbi/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mebbi.AppMebbi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2E265DE12CC008AB00BE3629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mebbi.AppMebbiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppMebbi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AppMebbi";
+			};
+			name = Debug;
+		};
+		2E265DE22CC008AB00BE3629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mebbi.AppMebbiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppMebbi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AppMebbi";
+			};
+			name = Release;
+		};
+		2E265DE42CC008AB00BE3629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mebbi.AppMebbiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AppMebbi;
+			};
+			name = Debug;
+		};
+		2E265DE52CC008AB00BE3629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mebbi.AppMebbiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AppMebbi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E265DAE2CC008AA00BE3629 /* Build configuration list for PBXProject "AppMebbi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E265DDB2CC008AB00BE3629 /* Debug */,
+				2E265DDC2CC008AB00BE3629 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E265DDD2CC008AB00BE3629 /* Build configuration list for PBXNativeTarget "AppMebbi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E265DDE2CC008AB00BE3629 /* Debug */,
+				2E265DDF2CC008AB00BE3629 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E265DE02CC008AB00BE3629 /* Build configuration list for PBXNativeTarget "AppMebbiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E265DE12CC008AB00BE3629 /* Debug */,
+				2E265DE22CC008AB00BE3629 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E265DE32CC008AB00BE3629 /* Build configuration list for PBXNativeTarget "AppMebbiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E265DE42CC008AB00BE3629 /* Debug */,
+				2E265DE52CC008AB00BE3629 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2E265DBA2CC008AA00BE3629 /* AnotacaoEntity.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2E265DBB2CC008AA00BE3629 /* AppMebbi.xcdatamodel */,
+			);
+			currentVersion = 2E265DBB2CC008AA00BE3629 /* AppMebbi.xcdatamodel */;
+			path = AnotacaoEntity.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2E265DAB2CC008AA00BE3629 /* Project object */;
+}
