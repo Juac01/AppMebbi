@@ -20,6 +20,7 @@
 		2E265DE92CC0092500BE3629 /* Anotacoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DE82CC0092500BE3629 /* Anotacoes.swift */; };
 		2E265E222CC00DF700BE3629 /* Notificacoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265E212CC00DF700BE3629 /* Notificacoes.swift */; };
 		2E265E5B2CC0227F00BE3629 /* CoreDataTeste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265E5A2CC0227F00BE3629 /* CoreDataTeste.swift */; };
+		2E472DE12CC049EC004EB01C /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E472DE02CC049EC004EB01C /* CanvasView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		2E265DE82CC0092500BE3629 /* Anotacoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anotacoes.swift; sourceTree = "<group>"; };
 		2E265E212CC00DF700BE3629 /* Notificacoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificacoes.swift; sourceTree = "<group>"; };
 		2E265E5A2CC0227F00BE3629 /* CoreDataTeste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTeste.swift; sourceTree = "<group>"; };
+		2E472DE02CC049EC004EB01C /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				2E265DBD2CC008AA00BE3629 /* ContentView.swift */,
 				2E265DE62CC0090A00BE3629 /* PickerColor.swift */,
 				2E265DE82CC0092500BE3629 /* Anotacoes.swift */,
+				2E472DE02CC049EC004EB01C /* CanvasView.swift */,
 				2E265E212CC00DF700BE3629 /* Notificacoes.swift */,
 				2E265E5A2CC0227F00BE3629 /* CoreDataTeste.swift */,
 				2E265DBF2CC008AB00BE3629 /* Assets.xcassets */,
@@ -285,6 +288,7 @@
 				2E265DB92CC008AA00BE3629 /* Persistence.swift in Sources */,
 				2E265E5B2CC0227F00BE3629 /* CoreDataTeste.swift in Sources */,
 				2E265DE72CC0090A00BE3629 /* PickerColor.swift in Sources */,
+				2E472DE12CC049EC004EB01C /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +450,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppMebbi/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppMebbi/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -483,6 +488,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppMebbi/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppMebbi/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

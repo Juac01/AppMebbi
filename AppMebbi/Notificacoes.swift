@@ -28,8 +28,8 @@ class NotificationManager {
         
         
         let content = UNMutableNotificationContent()
-        content.title = "This is my first notification!"
-        content.subtitle = "This was sooooo easy!"
+        content.title = "Hola pessoallllll"
+        content.subtitle = "Testando as notificacoes"
         content.sound = .default
         content.badge = 1 // NSNumber(value: UIApplication.shared.applicationIconBadgeNumber + 1)
         
