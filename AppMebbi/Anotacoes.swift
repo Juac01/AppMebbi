@@ -1,7 +1,7 @@
 import SwiftUI
 import PencilKit
 
-struct EditarCameraAnexo: View {
+struct Anotacoes: View {
     @State private var titulo: String = ""
     @State private var anotacoes: String = "As reações químicas são processos que envolvem a transformação de substâncias em novos compostos..."
     @State private var categoria: String = ""
@@ -11,12 +11,12 @@ struct EditarCameraAnexo: View {
     
     @State private var imagemAnexo: UIImage? = nil // Para imagem anexada
     @State private var foto: UIImage? = nil // Para foto da câmera
-    @State private var isDrawing: Bool = false 
+    @State private var isDrawing: Bool = false
     
     var body: some View {
         NavigationStack {
             VStack {
-                
+                 
                 // Título com estilo diferenciado
                 TextField("Insira o título", text: $titulo)
                     .font(.title2)
@@ -178,5 +178,5 @@ struct CanvasView: UIViewRepresentable {
 
 // Preview
 #Preview {
-    EditarCameraAnexo()
+    Anotacoes()
 }

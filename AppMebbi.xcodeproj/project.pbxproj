@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E265DB72CC008AA00BE3629 /* AppMebbiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DB62CC008AA00BE3629 /* AppMebbiApp.swift */; };
 		2E265DB92CC008AA00BE3629 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DB82CC008AA00BE3629 /* Persistence.swift */; };
-		2E265DBC2CC008AA00BE3629 /* AnotacaoEntity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DBA2CC008AA00BE3629 /* AnotacaoEntity.xcdatamodeld */; };
+		2E265DBC2CC008AA00BE3629 /* AppMebbi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DBA2CC008AA00BE3629 /* AppMebbi.xcdatamodeld */; };
 		2E265DBE2CC008AA00BE3629 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DBD2CC008AA00BE3629 /* ContentView.swift */; };
 		2E265DC02CC008AB00BE3629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E265DBF2CC008AB00BE3629 /* Assets.xcassets */; };
 		2E265DC42CC008AB00BE3629 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E265DC32CC008AB00BE3629 /* Preview Assets.xcassets */; };
@@ -18,6 +18,8 @@
 		2E265DDA2CC008AB00BE3629 /* AppMebbiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DD92CC008AB00BE3629 /* AppMebbiUITestsLaunchTests.swift */; };
 		2E265DE72CC0090A00BE3629 /* PickerColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DE62CC0090A00BE3629 /* PickerColor.swift */; };
 		2E265DE92CC0092500BE3629 /* Anotacoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DE82CC0092500BE3629 /* Anotacoes.swift */; };
+		2E265E222CC00DF700BE3629 /* Notificacoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265E212CC00DF700BE3629 /* Notificacoes.swift */; };
+		2E265E5B2CC0227F00BE3629 /* CoreDataTeste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265E5A2CC0227F00BE3629 /* CoreDataTeste.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		2E265DD92CC008AB00BE3629 /* AppMebbiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMebbiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2E265DE62CC0090A00BE3629 /* PickerColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerColor.swift; sourceTree = "<group>"; };
 		2E265DE82CC0092500BE3629 /* Anotacoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anotacoes.swift; sourceTree = "<group>"; };
+		2E265E212CC00DF700BE3629 /* Notificacoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificacoes.swift; sourceTree = "<group>"; };
+		2E265E5A2CC0227F00BE3629 /* CoreDataTeste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTeste.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +112,11 @@
 				2E265DBD2CC008AA00BE3629 /* ContentView.swift */,
 				2E265DE62CC0090A00BE3629 /* PickerColor.swift */,
 				2E265DE82CC0092500BE3629 /* Anotacoes.swift */,
+				2E265E212CC00DF700BE3629 /* Notificacoes.swift */,
+				2E265E5A2CC0227F00BE3629 /* CoreDataTeste.swift */,
 				2E265DBF2CC008AB00BE3629 /* Assets.xcassets */,
 				2E265DC12CC008AB00BE3629 /* AppMebbi.entitlements */,
-				2E265DBA2CC008AA00BE3629 /* AnotacaoEntity.xcdatamodeld */,
+				2E265DBA2CC008AA00BE3629 /* AppMebbi.xcdatamodeld */,
 				2E265DC22CC008AB00BE3629 /* Preview Content */,
 			);
 			path = AppMebbi;
@@ -271,11 +277,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E265E222CC00DF700BE3629 /* Notificacoes.swift in Sources */,
 				2E265DB72CC008AA00BE3629 /* AppMebbiApp.swift in Sources */,
-				2E265DBC2CC008AA00BE3629 /* AnotacaoEntity.xcdatamodeld in Sources */,
+				2E265DBC2CC008AA00BE3629 /* AppMebbi.xcdatamodeld in Sources */,
 				2E265DBE2CC008AA00BE3629 /* ContentView.swift in Sources */,
 				2E265DE92CC0092500BE3629 /* Anotacoes.swift in Sources */,
 				2E265DB92CC008AA00BE3629 /* Persistence.swift in Sources */,
+				2E265E5B2CC0227F00BE3629 /* CoreDataTeste.swift in Sources */,
 				2E265DE72CC0090A00BE3629 /* PickerColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,7 +456,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -456,10 +464,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Mebbi.AppMebbi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -484,7 +493,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -492,10 +501,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Mebbi.AppMebbi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -513,10 +523,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Mebbi.AppMebbiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppMebbi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AppMebbi";
 			};
 			name = Debug;
@@ -535,10 +546,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Mebbi.AppMebbiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppMebbi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AppMebbi";
 			};
 			name = Release;
@@ -556,10 +568,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Mebbi.AppMebbiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = AppMebbi;
 			};
 			name = Debug;
@@ -577,10 +590,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Mebbi.AppMebbiUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = AppMebbi;
 			};
 			name = Release;
@@ -627,13 +641,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2E265DBA2CC008AA00BE3629 /* AnotacaoEntity.xcdatamodeld */ = {
+		2E265DBA2CC008AA00BE3629 /* AppMebbi.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				2E265DBB2CC008AA00BE3629 /* AppMebbi.xcdatamodel */,
 			);
 			currentVersion = 2E265DBB2CC008AA00BE3629 /* AppMebbi.xcdatamodel */;
-			path = AnotacaoEntity.xcdatamodeld;
+			path = AppMebbi.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

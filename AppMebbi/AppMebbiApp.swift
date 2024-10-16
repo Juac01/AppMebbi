@@ -13,7 +13,7 @@ struct AppMebbiApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LocalNotificationBootcamp()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
