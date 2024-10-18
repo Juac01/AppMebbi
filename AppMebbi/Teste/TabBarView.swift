@@ -1,85 +1,98 @@
+//
+//  TabBarView.swift
+//  AppMebbi
+//
+//  Created by JOSE JOAQUIN JULCAMORO BUSTAMANTE on 18/10/24.
+//
+
 import SwiftUI
 
-// Tela 1: Anotações
+import SwiftUI
+
+enum Tab {
+    case anotacoes
+    case flashcards
+    case categorias
+}
+
+struct TabBarView: View {
+    @State private var selectedTab: Tab = .anotacoes
+
+    var body: some View {
+        TabView(selection: $selectedTab) {
+            AnotacoesView(selectedTab: $selectedTab)
+                .tabItem {
+                    Image(systemName: "magazine")
+                    Text("Anotações")
+                }
+                .tag(Tab.anotacoes)
+
+            FlashcardsView(selectedTab: $selectedTab)
+                .tabItem {
+                    Image(systemName: "greetingcard")
+                    Text("Flashcards")
+                }
+                .tag(Tab.flashcards)
+
+            CategoriasView(selectedTab: $selectedTab)
+                .tabItem {
+                    Image(systemName: "books.vertical")
+                    Text("Categorias")
+                }
+                .tag(Tab.categorias)
+        }
+        .accentColor(Color.blue) // Ou sua cor personalizada
+    }
+}
+
 struct AnotacoesView: View {
+    @Binding var selectedTab: Tab
+
     var body: some View {
         NavigationStack {
-            ZStack {
-                Color.red
+            VStack {
                 Text("Anotações")
-                    .font(.largeTitle)
-                    .padding()
+                Button("Ir para Flashcards") {
+                    selectedTab = .flashcards
+                }
             }
             .navigationTitle("Anotações")
         }
     }
 }
 
-// Tela 2: Flashcards
 struct FlashcardsView: View {
+    @Binding var selectedTab: Tab
+
     var body: some View {
         NavigationStack {
-            ZStack {
-                Color.blue
+            VStack {
                 Text("Flashcards")
-                    .font(.largeTitle)
-                    .padding()
+                Button("Ir para Categorias") {
+                    selectedTab = .categorias
+                }
             }
             .navigationTitle("Flashcards")
         }
     }
 }
 
-// Tela 3: Categorias
 struct CategoriasView: View {
+    @Binding var selectedTab: Tab
+
     var body: some View {
         NavigationStack {
-            ZStack {
-                Color.brown
+            VStack {
                 Text("Categorias")
-                    .font(.largeTitle)
-                    .padding()
+                Button("Ir para Anotações") {
+                    selectedTab = .anotacoes
+                }
             }
             .navigationTitle("Categorias")
-
         }
     }
 }
 
-// Tab Bar
-struct ConteudoViews: View {
-    
-    
-    var body: some View {
-        
-        TabView {
-            
-            ContentView()
-                .tabItem {
-                    Image(systemName: "magazine")
-                    Text("Anotações")
-                }
-            
-            FlashcardsView()
-                .tabItem {
-                    Image(systemName: "greetingcard")
-                    Text("Flashcards")
-                }
-            
-            CategoriasView()
-                .tabItem {
-                    Image(systemName: "books.vertical")
-                    Text("Categorias")
-                }
-        }
-        .accentColor(Color.azulPrincipal)
-        
-    }
-}
-
-// Preview
-struct ConteudoViews_Previews: PreviewProvider {
-    static var previews: some View {
-        ConteudoViews()
-    }
+#Preview {
+    TabBarView()
 }

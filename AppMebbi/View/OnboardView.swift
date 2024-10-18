@@ -1,10 +1,11 @@
 import SwiftUI
 
-struct OnboardingView: View {
-    @State private var currentTab = 0
+struct TelaDeIntroducao: View {
+    @State private var abaAtual = 0
     
     var body: some View {
-        TabView(selection: $currentTab) {
+        
+        TabView(selection: $abaAtual) {
             
             // Tela 1
             VStack {
@@ -22,7 +23,7 @@ struct OnboardingView: View {
                 Spacer()
                 
                 Button(action: {
-                    currentTab = 1
+                    abaAtual = 1
                 }) {
                     Text("Próximo")
                         .font(.headline)
@@ -35,7 +36,6 @@ struct OnboardingView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.azulPrincipal) // Cor #5561F4
-            // Para preencher a tela toda
             .tag(0)
             
             // Tela 2
@@ -54,7 +54,7 @@ struct OnboardingView: View {
                 Spacer()
                 
                 Button(action: {
-                    currentTab = 2
+                    abaAtual = 2
                 }) {
                     Text("Próximo")
                         .font(.headline)
@@ -67,7 +67,7 @@ struct OnboardingView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.amareloPrincipal) // Cor #F1A920
-            .ignoresSafeArea() // Para preencher a tela toda
+            .ignoresSafeArea()
             .tag(1)
             
             // Tela 3
@@ -86,7 +86,7 @@ struct OnboardingView: View {
                 Spacer()
                 
                 Button(action: {
-                    currentTab = 3
+                    abaAtual = 3
                 }) {
                     Text("Próximo")
                         .font(.headline)
@@ -99,7 +99,7 @@ struct OnboardingView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.azulPrincipal) // Cor #5561F4
-            .ignoresSafeArea() // Para preencher a tela toda
+            .ignoresSafeArea()
             .tag(2)
             
             // Tela 4
@@ -131,18 +131,17 @@ struct OnboardingView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.amareloPrincipal) // Cor #F1A920
-          // Para preencher a tela toda
             .tag(3)
         }
         .tabViewStyle(PageTabViewStyle())
+        .ignoresSafeArea()
+        
     }
 }
 
-
-
 // Preview
-struct OnboardingView_Previews: PreviewProvider {
+struct TelaDeIntroducao_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView() 
+        TelaDeIntroducao()
     }
 }
