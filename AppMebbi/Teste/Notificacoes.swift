@@ -1,5 +1,7 @@
 import SwiftUI
 import UserNotifications
+import AVFoundation
+import Photos
 
 class GerenciadorDeNotificacoes {
     
@@ -64,4 +66,42 @@ class GerenciadorDeNotificacoes {
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
     }
+   
+
+    func requestCameraPermission() {
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .authorized:
+            print("Permissão para câmera já concedida.")
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video) { granted in
+                if granted {
+                    print("Permissão para câmera concedida.")
+                } else {
+                    print("Permissão para câmera negada.")
+                }
+            }
+        case .denied:
+            print("Permissão para câmera negada.")
+        default:
+            break
+        }
+    }
+
+  
+
+    func requestPhotoLibraryPermission() {
+        PHPhotoLibrary.requestAuthorization { status in
+            switch status {
+            case .authorized:
+                print("Permissão para a biblioteca de fotos concedida.")
+            case .denied:
+                print("Permissão para a biblioteca de fotos negada.")
+            case .notDetermined:
+                print("Permissão para a biblioteca de fotos não determinada.")
+            default:
+                break
+            }
+        }
+    }
+
 }

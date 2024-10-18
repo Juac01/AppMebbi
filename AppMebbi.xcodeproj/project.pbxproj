@@ -67,6 +67,7 @@
 		2E265DD92CC008AB00BE3629 /* AppMebbiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMebbiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2E265E212CC00DF700BE3629 /* Notificacoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificacoes.swift; sourceTree = "<group>"; };
 		2E64F1E12CC2D22700C217DE /* NavigationRouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouteView.swift; sourceTree = "<group>"; };
+		2E64F1E32CC2FB8C00C217DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +238,7 @@
 		2E265DB52CC008AA00BE3629 /* AppMebbi */ = {
 			isa = PBXGroup;
 			children = (
+				2E64F1E32CC2FB8C00C217DE /* Info.plist */,
 				2E00D5342CC2AC630057BE44 /* Componentes */,
 				2E00D5152CC2A7D70057BE44 /* Model */,
 				2E00D5142CC2A7CC0057BE44 /* ViewModel */,
@@ -505,6 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -560,6 +563,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

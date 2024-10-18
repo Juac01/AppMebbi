@@ -2,7 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key></key>
-	<string></string>
+    <key>CFBundleName</key>
+    <string>AppMebbi</string>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Este aplicativo precisa acessar a câmera para tirar fotos.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Este aplicativo precisa acessar a biblioteca de fotos para escolher imagens.</string>
 </dict>
 </plist>

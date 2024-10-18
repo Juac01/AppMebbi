@@ -1,6 +1,8 @@
 import Foundation
 import SwiftUI
 import PencilKit
+import AVFoundation
+import Photos
 
 struct CanvasView: UIViewRepresentable {
     @Binding var canvasView: PKCanvasView
@@ -27,8 +29,7 @@ struct NovaAnotacaoView: View {
     @State private var editandoDesenho: Bool = false
     @State private var mostrandoActionSheet: Bool = false
     @State private var mostrandoOpcoesCamera: Bool = false
-    // Controle do modo de apresentação
-      @Environment(\.presentationMode) var presentationMode
+    
     
     var body: some View {
         NavigationStack{
@@ -91,8 +92,8 @@ struct NovaAnotacaoView: View {
                 }
                 
                 Spacer()
-            } 
-        
+            }
+            
             .toolbar{
                 ToolbarItem(placement: .topBarLeading){
                     NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true)){
@@ -151,7 +152,7 @@ struct NovaAnotacaoView: View {
                             .actionSheet(isPresented: $mostrandoActionSheet) {
                                 ActionSheet(title: Text("Anexar"), message: Text("Escolha uma opção"), buttons: [
                                     .default(Text("Escolher Foto")) {
-                                        
+                                        requestPhotoLibraryPermission()
                                     },
                                     .default(Text("Anexar Arquivo")) {
                                         
@@ -192,12 +193,10 @@ struct NovaAnotacaoView: View {
                             .actionSheet(isPresented: $mostrandoOpcoesCamera) {
                                 ActionSheet(title: Text("Câmera"), message: Text("Escolha uma opção"), buttons: [
                                     .default(Text("Tirar Foto")) {
-                                        //sourceType = .camera
-                                        // mostrandoCameraOptions = true
+                                        requestCameraPermission()
                                     },
                                     .default(Text("Escolher da Galeria")) {
-                                        // sourceType = .photoLibrary
-                                        //  mostrandoCameraOptions = true
+                                        requestPhotoLibraryPermission()
                                     },
                                     .cancel()
                                 ])
@@ -212,15 +211,43 @@ struct NovaAnotacaoView: View {
                 }
                 
             }
-            .onAppear {
-                       // Mostra a TabBar ao voltar
-                       if presentationMode.wrappedValue.isPresented {
-                           // Lógica para mostrar a TabBar, se necessário
-                       }
-                   }
-            
         }
     }
+    
+    func requestCameraPermission() {
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .authorized:
+            print("Permissão para câmera já concedida.")
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video) { granted in
+                if granted {
+                    print("Permissão para câmera concedida.")
+                } else {
+                    print("Permissão para câmera negada.")
+                }
+            }
+        case .denied:
+            print("Permissão para câmera negada.")
+        default:
+            break
+        }
+    }
+    
+    func requestPhotoLibraryPermission() {
+        PHPhotoLibrary.requestAuthorization { status in
+            switch status {
+            case .authorized:
+                print("Permissão para a biblioteca de fotos concedida.")
+            case .denied:
+                print("Permissão para a biblioteca de fotos negada.")
+            case .notDetermined:
+                print("Permissão para a biblioteca de fotos não determinada.")
+            default:
+                break
+            }
+        }
+    }
+
 }
 
 #Preview {
