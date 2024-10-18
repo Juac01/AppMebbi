@@ -9,12 +9,9 @@ import SwiftUI
 
 @main
 struct AppMebbiApp: App {
-    let persistenceController = PersistenceController.shared
-
     var body: some Scene {
         WindowGroup {
             LocalNotificationBootcamp()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

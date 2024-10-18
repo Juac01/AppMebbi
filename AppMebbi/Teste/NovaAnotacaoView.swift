@@ -1,35 +1,61 @@
+import Foundation
 import SwiftUI
 import PencilKit
 
-struct Anotacoes: View {
-    
+struct CanvasView: UIViewRepresentable {
+    @Binding var canvasView: PKCanvasView
+    func makeUIView(context: Context) -> PKCanvasView {
+        canvasView.drawingPolicy = .anyInput
+        return canvasView
+    }
+    func updateUIView(_ uiView: PKCanvasView, context: Context) {
+        
+    }
+}
+
+
+struct NovaAnotacaoView: View {
     @State private var canvasView = PKCanvasView()
     @State private var ferramentaPicker = PKToolPicker()
     
-    
     @State private var titulo: String = ""
+    private var maxCharacters = 30
     @State private var anotacoes: String = "As reações químicas são processos que envolvem a transformação de substâncias em novos compostos..."
-    @State private var categoria: String = ""
-    @State private var imagemAnexo: UIImage? = nil // Para imagem anexada
-    @State private var foto: UIImage? = nil // Para foto da câmera
-    @State private var desenhando: Bool = false // Controla o estado de desenho
-    @State private var editandoDesenho: Bool = false // Controla se está editando ou não o desenho
-    @State private var mostrandoActionSheet: Bool = false // Controla a exibição do ActionSheet
+    @State private var imagemAnexo: UIImage? = nil
+    @State private var foto: UIImage? = nil
+    @State private var desenhando: Bool = false
+    @State private var editandoDesenho: Bool = false
+    @State private var mostrandoActionSheet: Bool = false
     @State private var mostrandoOpcoesCamera: Bool = false
     
+    
+    
     var body: some View {
-        NavigationStack {
+        NavigationStack{
             VStack {
-                // Título com estilo diferenciado
                 TextField("Insira o título", text: $titulo)
                     .font(.title2)
                     .fontWeight(.bold)
-                    .foregroundColor(Color("Color"))
+                    .foregroundColor(titulo.count > maxCharacters ? Color.red : Color("azulPrincipal"))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 30)
                     .padding(.top, 30)
+                    .onChange(of: titulo) { newValue in
+                        // Limitar os caracteres se passar do máximo
+                        if newValue.count > maxCharacters {
+                            titulo = String(newValue.prefix(maxCharacters))
+                        }
+                    }
                 
-                // Corpo de texto
+                // Aviso de limite excedido
+                if titulo.count == maxCharacters {
+                    Text("O título atingiu o limite de \(maxCharacters) caracteres.")
+                        .font(.caption)
+                        .foregroundColor(.red)
+                        .padding(.horizontal, 30)
+                }
+                
+                
                 TextEditor(text: $anotacoes)
                     .padding(.horizontal, 30)
                     .padding(.top, 10)
@@ -39,10 +65,8 @@ struct Anotacoes: View {
                     .font(.body)
                     .foregroundColor(Color.black)
                 
-                // Exibe o desenho quando não está editando
                 if desenhando {
                     if editandoDesenho {
-                        // Se estiver no modo de edição de desenho
                         CanvasView(canvasView: $canvasView)
                             .onAppear {
                                 if let window = UIApplication.shared.windows.first {
@@ -53,11 +77,10 @@ struct Anotacoes: View {
                             }
                             .background(Color.clear)
                             .cornerRadius(8)
-                            .frame(height: 300) // Tamanho da área de desenho
+                            .frame(height: 300)
                             .padding(.horizontal, 30)
                             .padding(.top, 10)
                     } else {
-                        // Se estiver apenas visualizando o desenho
                         Image(uiImage: canvasView.drawing.image(from: canvasView.bounds, scale: 1.0))
                             .resizable()
                             .scaledToFit()
@@ -69,65 +92,70 @@ struct Anotacoes: View {
                 
                 Spacer()
             }
-            .toolbar {
-                // Botão de voltar
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        // Ação para voltar
-                    }) {
-                        HStack {
-                            Image(systemName: "chevron.left")
-                                .foregroundColor(Color("Color"))
+            .toolbar{
+                ToolbarItem(placement: .topBarLeading){
+                    NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true)){
+                        HStack{
+                            Image(systemName: "chevron.backward")
+                                .foregroundColor(Color.azulPrincipal.opacity(0.5))
                             Text("Voltar")
-                                .foregroundColor(Color("Color"))
+                                .foregroundStyle(Color.azulPrincipal.opacity(0.5))
+                                .font(.title3)
                         }
+                        
                     }
                 }
-                
-                // Botão de salvar
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .principal){
+                    Text("Anotação")
+                        .foregroundColor(Color.azulPrincipal)
+                        .font(.title2)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                }
+                ToolbarItem(placement: .topBarTrailing) {
                     if editandoDesenho {
-                        // Se estiver no modo de edição de desenho, mostrar "OK"
                         Button(action: {
-                            editandoDesenho = false // Alterna para visualização
+                            editandoDesenho = false
                         }) {
                             Text("OK")
-                                .foregroundColor(Color("Color"))
+                                .foregroundColor(Color.azulPrincipal)
+                                .padding(.trailing, 5)
+                                .font(.title3)
                         }
                     } else {
-                        // Se não estiver editando o desenho, mostrar "Salvar"
-                        Button(action: {
-                            // Ação para salvar as anotações e o desenho
-                        }) {
-                            Text("Salvar")
-                                .foregroundColor(Color("Color"))
+                        NavigationLink(destination: DetalhesView().navigationBarBackButtonHidden(true)){
+                            HStack{
+                                Text("Salvar")
+                                    .foregroundStyle(Color.azulPrincipal.opacity(0.5))
+                                    .font(.title3)
+                                Image(systemName: "chevron.forward")
+                                    .foregroundStyle(Color.azulPrincipal.opacity(0.5))
+                            }
                         }
                     }
                 }
                 
-                // Itens da barra inferior
-                ToolbarItem(placement: .bottomBar) {
+                ToolbarItem(placement: .bottomBar ) {
                     HStack {
                         Spacer()
                         Button(action: {
-                            mostrandoActionSheet = true // Mostra o ActionSheet
+                            mostrandoActionSheet = true
                         }) {
                             VStack {
                                 Image(systemName: "paperclip")
-                                    .foregroundColor(Color("Color"))
+                                    .foregroundColor(Color.azulPrincipal)
                                 Text("Anexar")
-                                    .foregroundColor(Color("Color"))
+                                    .foregroundColor(Color.azulPrincipal)
                                     .font(.system(size: 12))
                             }
                             .actionSheet(isPresented: $mostrandoActionSheet) {
                                 ActionSheet(title: Text("Anexar"), message: Text("Escolha uma opção"), buttons: [
                                     .default(Text("Escolher Foto")) {
-                                        // Ação para escolher foto
+                                        
                                     },
                                     .default(Text("Anexar Arquivo")) {
-                                        // Ação para anexar arquivo
+                                        
                                     },
-                                    .cancel() // Botão de cancelamento
+                                    .cancel()
                                 ])
                             }
                         }
@@ -135,42 +163,42 @@ struct Anotacoes: View {
                         Spacer()
                         Button(action: {
                             if desenhando {
-                                editandoDesenho.toggle() // Alterna entre editar e visualizar desenho
+                                editandoDesenho.toggle()
                             } else {
-                                desenhando = true // Habilita o desenho pela primeira vez
+                                desenhando = true
                                 editandoDesenho = true
                             }
                         }) {
                             VStack {
                                 Image(systemName: "pencil.tip.crop.circle")
-                                    .foregroundColor(Color("Color"))
+                                    .foregroundColor(Color.azulPrincipal)
                                 Text(editandoDesenho ? "OK" : "Desenhar")
-                                    .foregroundColor(Color("Color"))
+                                    .foregroundColor(Color.azulPrincipal)
                                     .font(.system(size: 12))
                             }
                         }
                         Spacer()
                         Button(action: {
-                            mostrandoOpcoesCamera = true // Mostra o ActionSheet para escolher entre câmera e galeria
+                            mostrandoOpcoesCamera = true
                         }) {
                             VStack {
                                 Image(systemName: "camera")
-                                    .foregroundColor(Color("Color"))
+                                    .foregroundColor(Color.azulPrincipal)
                                 Text("Câmera")
-                                    .foregroundColor(Color("Color"))
+                                    .foregroundColor(Color.azulPrincipal)
                                     .font(.system(size: 12))
                             }
                             .actionSheet(isPresented: $mostrandoOpcoesCamera) {
                                 ActionSheet(title: Text("Câmera"), message: Text("Escolha uma opção"), buttons: [
                                     .default(Text("Tirar Foto")) {
                                         //sourceType = .camera
-                                       // mostrandoCameraOptions = true
+                                        // mostrandoCameraOptions = true
                                     },
                                     .default(Text("Escolher da Galeria")) {
-                                       // sourceType = .photoLibrary
-                                      //  mostrandoCameraOptions = true
+                                        // sourceType = .photoLibrary
+                                        //  mostrandoCameraOptions = true
                                     },
-                                    .cancel() // Botão de cancelamento
+                                    .cancel()
                                 ])
                             }
                         }
@@ -181,17 +209,13 @@ struct Anotacoes: View {
                     .background(Color.white)
                     .cornerRadius(8)
                 }
+                
             }
-            .navigationTitle("Anotação")
-            .navigationBarTitleDisplayMode(.inline)
-            
             
         }
     }
 }
 
-
-// Preview
 #Preview {
-    Anotacoes()
+    NovaAnotacaoView()
 }
