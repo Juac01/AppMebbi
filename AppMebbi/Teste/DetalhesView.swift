@@ -47,12 +47,27 @@ struct DetalhesView: View {
                     Text("Repetição Espaçada")
                         .foregroundColor(Color.cinza)
                     Spacer()
-                    Menu(selecionadaRepeticao){
-                        Button("1-7-30", action: {selecionadaRepeticao = "1-7-30" })
-                        Button("1-3-7-14",  action: {selecionadaRepeticao = "1-3-7-14" })
-                        Button("2-4-8-16-32", action: {selecionadaRepeticao = "2-4-8-16-32" })
-                        Button("Nenhuma", action: {selecionadaRepeticao = "Nenhuma" })
-                    }.foregroundColor(Color.azulPrincipal)
+                    Menu(selecionadaRepeticao) {
+                        Button("1-7-30") {
+                            selecionadaRepeticao = "1-7-30"
+                            GerenciadorDeNotificacoes.instancia.agendarNotificacao(para: 7 ) // 7 segundos
+                        }
+                        
+                        Button("1-3-7-14") {
+                            selecionadaRepeticao = "1-3-7-14"
+                            GerenciadorDeNotificacoes.instancia.agendarNotificacao(para: 14 ) // 14 segundos
+                        }
+                        
+                        Button("2-4-8-16-32") {
+                            selecionadaRepeticao = "2-4-8-16-32"
+                            GerenciadorDeNotificacoes.instancia.agendarNotificacao(para: 32 ) // 32 segundos
+                        }
+                        
+                        Button("Nenhuma") {
+                            selecionadaRepeticao = "Nenhuma"
+                        }
+                    }
+                    .foregroundColor(Color.azulPrincipal)
                     Image(systemName: "chevron.up.chevron.down")
                         .foregroundColor(Color.azulPrincipal)
                 }
@@ -89,11 +104,7 @@ struct DetalhesView: View {
                             Image(systemName: "chevron.forward")
                                 .foregroundStyle(Color.azulPrincipal.opacity(0.5))
                             
-                            /*
-                             Button(action: {showingSheet.toogle()}.sheet(isPresented: $showingSheet){RepeticaoSheet()}){
-                             Image(systemName: "chevron.forward")
-                             .foregroundStyle(Color.azulPrincipal)
-                             }*/
+                
                         }
                     }
                 }

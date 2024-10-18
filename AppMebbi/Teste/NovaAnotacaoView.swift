@@ -27,8 +27,8 @@ struct NovaAnotacaoView: View {
     @State private var editandoDesenho: Bool = false
     @State private var mostrandoActionSheet: Bool = false
     @State private var mostrandoOpcoesCamera: Bool = false
-    
-    
+    // Controle do modo de apresentação
+      @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationStack{
@@ -91,7 +91,8 @@ struct NovaAnotacaoView: View {
                 }
                 
                 Spacer()
-            }
+            } 
+        
             .toolbar{
                 ToolbarItem(placement: .topBarLeading){
                     NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true)){
@@ -211,6 +212,12 @@ struct NovaAnotacaoView: View {
                 }
                 
             }
+            .onAppear {
+                       // Mostra a TabBar ao voltar
+                       if presentationMode.wrappedValue.isPresented {
+                           // Lógica para mostrar a TabBar, se necessário
+                       }
+                   }
             
         }
     }

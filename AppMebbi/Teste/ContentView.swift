@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var materias = ["Quimica I", "Quimica II", "Quimica III", "Quimica IV"]
     @State private var dataAnotacao = Date.now
+   
     
     var body: some View {
         NavigationStack {
@@ -18,6 +19,7 @@ struct ContentView: View {
                 .background(Color.azulPrincipal)
                 .cornerRadius(35)
             }.padding()
+               
             
             Divider()
                 .background(Color.azulPrincipal)

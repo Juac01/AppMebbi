@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
 
 enum Tab {
     case anotacoes

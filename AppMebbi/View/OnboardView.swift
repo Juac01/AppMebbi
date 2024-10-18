@@ -1,10 +1,10 @@
 import SwiftUI
+import UserNotifications
 
 struct TelaDeIntroducao: View {
     @State private var abaAtual = 0
     
     var body: some View {
-        
         TabView(selection: $abaAtual) {
             
             // Tela 1
@@ -16,26 +16,20 @@ struct TelaDeIntroducao: View {
                     .bold()
                     .padding()
                 
-                Text("Esta é a primeira tela do onboarding.")
+                Text("Use mebbi para turbinar e organizar seus estudos.")
                     .font(.title2)
                     .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+                Image("Onboard01")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300, height: 400)
                 
                 Spacer()
-                
-                Button(action: {
-                    abaAtual = 1
-                }) {
-                    Text("Próximo")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.white.opacity(0.3))
-                        .cornerRadius(8)
-                }
-                .padding(.bottom, 50)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.azulPrincipal) // Cor #5561F4
+            .background(Color.amareloPrincipal) // Cor #5561F4
             .tag(0)
             
             // Tela 2
@@ -47,26 +41,20 @@ struct TelaDeIntroducao: View {
                     .bold()
                     .padding()
                 
-                Text("Esta é a segunda tela do onboarding.")
+                Text("Todas suas anotações e resumos em um só lugar.")
                     .font(.title2)
                     .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 40.0)
+                Image("Onboard02")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300, height: 400)
                 
                 Spacer()
-                
-                Button(action: {
-                    abaAtual = 2
-                }) {
-                    Text("Próximo")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.white.opacity(0.3))
-                        .cornerRadius(8)
-                }
-                .padding(.bottom, 50)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.amareloPrincipal) // Cor #F1A920
+            .background(Color.azulPrincipal) // Cor #F1A920
             .ignoresSafeArea()
             .tag(1)
             
@@ -79,26 +67,20 @@ struct TelaDeIntroducao: View {
                     .bold()
                     .padding()
                 
-                Text("Esta é a terceira tela do onboarding.")
+                Text("Fixe os conteúdos com a técnica de repetição espaçada.")
                     .font(.title2)
                     .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 40.0)
+                Image("Onboard03")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300, height: 400)
                 
                 Spacer()
-                
-                Button(action: {
-                    abaAtual = 3
-                }) {
-                    Text("Próximo")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.white.opacity(0.3))
-                        .cornerRadius(8)
-                }
-                .padding(.bottom, 50)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.azulPrincipal) // Cor #5561F4
+            .background(Color.amareloPrincipal) // Cor #5561F4
             .ignoresSafeArea()
             .tag(2)
             
@@ -111,31 +93,41 @@ struct TelaDeIntroducao: View {
                     .bold()
                     .padding()
                 
-                Text("Esta é a última tela do onboarding.")
+                Text("Ao clicar em “Permitir”, notificaremos quando você precisar revisar seu conteúdo!.")
                     .font(.title2)
                     .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 40.0)
+                Image("Onboard04")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300, height: 400)
                 
                 Spacer()
-                
-                Button(action: {
-                    // Ação para finalizar o onboarding
-                }) {
-                    Text("Concluir")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.white.opacity(0.3))
-                        .cornerRadius(8)
-                }
-                .padding(.bottom, 50)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.amareloPrincipal) // Cor #F1A920
+            .background(Color.azulPrincipal) // Cor #F1A920
             .tag(3)
         }
         .tabViewStyle(PageTabViewStyle())
         .ignoresSafeArea()
-        
+        .onChange(of: abaAtual) { newValue in
+            if newValue == 3 { // Corrigido para a última aba
+                solicitarAutorizacao()
+            }
+        }
+    }
+    
+    func solicitarAutorizacao() {
+        let opcoes: UNAuthorizationOptions = [.alert, .sound, .badge]
+        UNUserNotificationCenter.current().requestAuthorization(options: opcoes) { (sucesso, erro) in
+            if let erro = erro {
+                print("ERRO: \(erro)")
+            } else {
+                print("SUCESSO")
+                
+            }
+        }
     }
 }
 

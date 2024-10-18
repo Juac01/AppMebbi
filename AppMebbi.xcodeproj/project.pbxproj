@@ -24,6 +24,7 @@
 		2E265DD82CC008AB00BE3629 /* AppMebbiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DD72CC008AB00BE3629 /* AppMebbiUITests.swift */; };
 		2E265DDA2CC008AB00BE3629 /* AppMebbiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265DD92CC008AB00BE3629 /* AppMebbiUITestsLaunchTests.swift */; };
 		2E265E222CC00DF700BE3629 /* Notificacoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E265E212CC00DF700BE3629 /* Notificacoes.swift */; };
+		2E64F1E22CC2D22700C217DE /* NavigationRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64F1E12CC2D22700C217DE /* NavigationRouteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		2E265DD72CC008AB00BE3629 /* AppMebbiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMebbiUITests.swift; sourceTree = "<group>"; };
 		2E265DD92CC008AB00BE3629 /* AppMebbiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMebbiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2E265E212CC00DF700BE3629 /* Notificacoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificacoes.swift; sourceTree = "<group>"; };
+		2E64F1E12CC2D22700C217DE /* NavigationRouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				2E265DB62CC008AA00BE3629 /* AppMebbiApp.swift */,
 				2E265E212CC00DF700BE3629 /* Notificacoes.swift */,
 				2E00D5222CC2A9110057BE44 /* TabBarView.swift */,
+				2E64F1E12CC2D22700C217DE /* NavigationRouteView.swift */,
 				2E00D5262CC2AAC80057BE44 /* ContentView.swift */,
 				2E00D5282CC2AAE70057BE44 /* NovaAnotacaoView.swift */,
 				2E00D52A2CC2AB3C0057BE44 /* DetalhesView.swift */,
@@ -408,6 +411,7 @@
 				2E00D5332CC2AC0B0057BE44 /* AnotacaoView.swift in Sources */,
 				2E00D52B2CC2AB3C0057BE44 /* DetalhesView.swift in Sources */,
 				2E00D5272CC2AAC80057BE44 /* ContentView.swift in Sources */,
+				2E64F1E22CC2D22700C217DE /* NavigationRouteView.swift in Sources */,
 				2E00D5312CC2ABA70057BE44 /* CategoriaSheet.swift in Sources */,
 				2E00D52F2CC2AB8E0057BE44 /* RepeticaoSheet.swift in Sources */,
 				2E00D5232CC2A9110057BE44 /* TabBarView.swift in Sources */,
@@ -585,7 +589,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -623,7 +627,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
