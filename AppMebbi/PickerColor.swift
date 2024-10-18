@@ -1,9 +1,4 @@
-//
-//  PickerColorPOC.swift
-//  Mebbi
-//
-//  Created by JOSE JOAQUIN JULCAMORO BUSTAMANTE on 11/10/24.
-//
+
 
 import SwiftUI
 
